@@ -1,0 +1,29 @@
+{
+  "name": "@dword-design/nuxt-push-plugins",
+  "version": "1.0.0",
+  "description": "",
+  "repository": "dword-design/nuxt-push-plugins",
+  "license": "MIT",
+  "author": "Sebastian Landwehr <info@dword-design.de>",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "commit": "base commit",
+    "depgraph": "base depgraph",
+    "prepare": "base prepare",
+    "prepublishOnly": "base prepublishOnly",
+    "release": "base release",
+    "test": "base test"
+  },
+  "dependencies": {
+    "@dword-design/functions": "^1.1.0"
+  },
+  "devDependencies": {
+    "@dword-design/base": "^6.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,11 +1,12 @@
-import P from 'path'
 import { forIn } from '@dword-design/functions'
+import P from 'path'
 
-export default (self, ...templates) => templates
-  |> forIn(template => {
-    const { dst } = self.addTemplate(template)
+export default (self, ...plugins) =>
+  plugins
+  |> forIn(plugin => {
+    const template = self.addTemplate(plugin)
     self.options.plugins.push({
-      src: P.join(self.options.buildDir, dst),
-      mode: template.mode,
+      mode: plugin.mode,
+      src: P.join(self.options.buildDir, template.dst),
     })
   })

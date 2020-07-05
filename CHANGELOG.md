@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/dword-design/nuxt-push-plugins/compare/v1.0.1...v1.0.2) (2020-07-05)
+
+
+### Bug Fixes
+
+* **deps:** update dependency nuxt to ~2.13.0 ([b80a764](https://github.com/dword-design/nuxt-push-plugins/commit/b80a764ec29992c4ce1c0c9d25335d972d68fad4))
+
 ## [1.0.1](https://github.com/dword-design/nuxt-push-plugins/compare/v1.0.0...v1.0.1) (2020-07-04)
 
 

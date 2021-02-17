@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/dword-design/nuxt-push-plugins/compare/v1.0.6...v1.0.7) (2021-02-17)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/puppeteer to v2 ([#9](https://github.com/dword-design/nuxt-push-plugins/issues/9)) ([8b6d71d](https://github.com/dword-design/nuxt-push-plugins/commit/8b6d71d961b79a1a0bdc47426635e12b40311be1))
+
 ## [1.0.6](https://github.com/dword-design/nuxt-push-plugins/compare/v1.0.5...v1.0.6) (2021-02-17)
 
 

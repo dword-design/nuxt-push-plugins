@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/dword-design/nuxt-push-plugins/compare/v1.0.5...v1.0.6) (2021-02-17)
+
+
+### Bug Fixes
+
+* reset nuxt version ([d2549b2](https://github.com/dword-design/nuxt-push-plugins/commit/d2549b2e0f1e5b250474ca504cae59005fd84139))
+
 ## [1.0.5](https://github.com/dword-design/nuxt-push-plugins/compare/v1.0.4...v1.0.5) (2021-02-17)
 
 

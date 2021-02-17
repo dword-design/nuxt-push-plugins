@@ -1161,7 +1161,7 @@
     "@dword-design/functions" "^1.1.2"
     babel-plugin-module-resolver "^4.0.0"
 
-"@dword-design/functions@^1.1.0", "@dword-design/functions@^1.1.2":
+"@dword-design/functions@^1.1.2", "@dword-design/functions@^1.1.6":
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/@dword-design/functions/-/functions-1.1.6.tgz#6ea6707beb01d330681f66b2275882d47452e4ce"
   integrity sha512-qar2Xywk8GMpx9IJTGg6A+6pswH/z9sTAFBQqDc1b7E/OwnXUwNO3Q4ELo/ZeLbJeXl5DDwvshYMcJfs2MZxDQ==
@@ -4413,7 +4413,7 @@ depcheck-parser-babel@^1.2.0:
     "@babel/core" "^7.7.7"
     fs-extra "^9.0.0"
 
-"depcheck@github:dword-design/depcheck#fork":
+depcheck@dword-design/depcheck#fork:
   version "0.0.1"
   resolved "https://codeload.github.com/dword-design/depcheck/tar.gz/8a9eb41006c2c6f9cbd79e4e68bf265e1c1df1dc"
   dependencies:
@@ -4738,7 +4738,7 @@ end-of-stream@^1.0.0, end-of-stream@^1.1.0, end-of-stream@^1.4.1:
   dependencies:
     once "^1.4.0"
 
-endent@dword-design/endent#fork:
+endent@dword-design/endent#fork, "endent@github:dword-design/endent#fork":
   version "1.4.0"
   resolved "https://codeload.github.com/dword-design/endent/tar.gz/be5433db67eaec07c6c9d00ba3bed2ed946dc664"
   dependencies:

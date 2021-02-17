@@ -18,12 +18,13 @@
     "prepublishOnly": "base prepublishOnly",
     "test": "base test"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@dword-design/functions": "^1.1.6"
+  },
   "devDependencies": {
     "@dword-design/base": "^7.0.0",
-    "@dword-design/functions": "^1.1.6",
     "@dword-design/puppeteer": "^1.0.2",
-    "nuxt": "^2.14.3",
+    "nuxt": "~2.14.0",
     "output-files": "^1.1.17",
     "with-local-tmp-dir": "^2.2.11"
   },

@@ -9,7 +9,11 @@ let page
 const runTest = config => () =>
   withLocalTmpDir(async () => {
     await outputFiles(config.files)
-    const nuxt = new Nuxt({ createRequire: 'native', dev: false, ...config.nuxtConfig })
+    const nuxt = new Nuxt({
+      createRequire: 'native',
+      dev: false,
+      ...config.nuxtConfig,
+    })
     await new Builder(nuxt).build()
     await nuxt.listen()
     await page.goto('http://localhost:3000')

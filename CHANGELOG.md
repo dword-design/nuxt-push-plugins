@@ -1,3 +1,10 @@
+## [1.0.12](https://github.com/dword-design/nuxt-push-plugins/compare/v1.0.11...v1.0.12) (2021-03-23)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/functions to v3 ([#16](https://github.com/dword-design/nuxt-push-plugins/issues/16)) ([560e4c5](https://github.com/dword-design/nuxt-push-plugins/commit/560e4c5b70fe54d8f922ae5d5a7be0633e00e0ce))
+
 ## [1.0.11](https://github.com/dword-design/nuxt-push-plugins/compare/v1.0.10...v1.0.11) (2021-03-22)
 
 

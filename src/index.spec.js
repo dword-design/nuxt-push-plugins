@@ -6,9 +6,11 @@ import withLocalTmpDir from 'with-local-tmp-dir'
 
 let browser
 let page
+
 const runTest = config => () =>
   withLocalTmpDir(async () => {
     await outputFiles(config.files)
+
     const nuxt = new Nuxt({
       createRequire: 'native',
       dev: false,

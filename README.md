@@ -1,12 +1,12 @@
 <!-- TITLE/ -->
-# @dword-design/nuxt-push-plugins
+# nuxt-push-plugins
 <!-- /TITLE -->
 
 <!-- BADGES/ -->
   <p>
-    <a href="https://npmjs.org/package/@dword-design/nuxt-push-plugins">
+    <a href="https://npmjs.org/package/nuxt-push-plugins">
       <img
-        src="https://img.shields.io/npm/v/@dword-design/nuxt-push-plugins.svg"
+        src="https://img.shields.io/npm/v/nuxt-push-plugins.svg"
         alt="npm version"
       >
     </a><img src="https://img.shields.io/badge/os-linux%20%7C%C2%A0macos%20%7C%C2%A0windows-blue" alt="Linux macOS Windows compatible"><a href="https://github.com/dword-design/nuxt-push-plugins/actions">
@@ -50,20 +50,46 @@
 <!-- /BADGES -->
 
 <!-- DESCRIPTION/ -->
-
+Pushes Nuxt.js plugins to the end of the list instead of the start.
 <!-- /DESCRIPTION -->
+
+When calling [this.addPlugin](https://nuxtjs.org/docs/2.x/internals-glossary/internals-module-container#addplugin-template) inside a Nuxt module, Nuxt does in fact not add the plugin to the end of the list, but to the beginning via [Array.unshift](https://www.w3schools.com/jsref/jsref_unshift.asp). There are cases where you actually want to push plugins to the end of the list so that they can make use of already-added plugins. This package provides a helper function to do that.
 
 <!-- INSTALL/ -->
 ## Install
 
 ```bash
 # npm
-$ npm install @dword-design/nuxt-push-plugins
+$ npm install nuxt-push-plugins
 
 # Yarn
-$ yarn add @dword-design/nuxt-push-plugins
+$ yarn add nuxt-push-plugins
 ```
 <!-- /INSTALL -->
+
+## Usage
+
+Import the function into your Nuxt module and call it by passing `this` and the plugins you want to add. It behaves like [Array.push](https://www.w3schools.com/jsref/jsref_push.asp).
+
+```js
+// module
+import nuxtPushPlugins from 'nuxt-push-plugins'
+
+export default function () {
+
+  // single plugin
+  nuxtPushPlugins(this, require.resolve('./plugin'))
+
+  // plugin object
+  nuxtPushPlugins(this, { src: require.resolve('./plugin'), mode: 'client' })
+
+  // multiple plugins
+  nuxtPushPlugins(this,
+    require.resolve('./plugin'),
+    { src: require.resolve('./plugin'), mode: 'client' },
+  )
+}
+```
 
 <!-- LICENSE/ -->
 ## Contribute

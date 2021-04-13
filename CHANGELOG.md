@@ -1,3 +1,11 @@
+## [1.0.16](https://github.com/dword-design/nuxt-push-plugins/compare/v1.0.15...v1.0.16) (2021-04-13)
+
+
+### Bug Fixes
+
+* add keywords ([d386a38](https://github.com/dword-design/nuxt-push-plugins/commit/d386a3884daa2a6dd6ed75bb148e72dab850244a))
+* adjust readme ([c674058](https://github.com/dword-design/nuxt-push-plugins/commit/c67405816cd2c780d888ca1e279a8750b2c74e02))
+
 ## [1.0.15](https://github.com/dword-design/nuxt-push-plugins/compare/v1.0.14...v1.0.15) (2021-04-13)
 
 

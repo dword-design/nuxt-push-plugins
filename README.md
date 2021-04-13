@@ -81,7 +81,10 @@ export default function () {
   nuxtPushPlugins(this, require.resolve('./plugin'))
 
   // plugin object
-  nuxtPushPlugins(this, { src: require.resolve('./plugin'), mode: 'client' })
+  nuxtPushPlugins(this, {
+    src: require.resolve('./plugin'),
+    mode: 'client',
+  })
 
   // multiple plugins
   nuxtPushPlugins(this,

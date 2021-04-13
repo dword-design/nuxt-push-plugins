@@ -1,3 +1,10 @@
+## [1.0.15](https://github.com/dword-design/nuxt-push-plugins/compare/v1.0.14...v1.0.15) (2021-04-13)
+
+
+### Bug Fixes
+
+* open source ([783c013](https://github.com/dword-design/nuxt-push-plugins/commit/783c0134e0d09a449b06ec125391916e75f63e8e))
+
 ## [1.0.14](https://github.com/dword-design/nuxt-push-plugins/compare/v1.0.13...v1.0.14) (2021-04-12)
 
 

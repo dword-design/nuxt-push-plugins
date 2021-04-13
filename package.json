@@ -6,6 +6,8 @@
     "addPlugin",
     "addTemplate",
     "back",
+    "dependency",
+    "dependencies",
     "end",
     "front",
     "module",

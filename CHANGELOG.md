@@ -1,3 +1,10 @@
+## [1.0.18](https://github.com/dword-design/nuxt-push-plugins/compare/v1.0.17...v1.0.18) (2021-04-26)
+
+
+### Bug Fixes
+
+* update dependency with-local-tmp-dir to v3 ([#27](https://github.com/dword-design/nuxt-push-plugins/issues/27)) ([c2d68f9](https://github.com/dword-design/nuxt-push-plugins/commit/c2d68f99a77888d951c48f2ee6846e281bb360f3))
+
 ## [1.0.17](https://github.com/dword-design/nuxt-push-plugins/compare/v1.0.16...v1.0.17) (2021-04-26)
 
 

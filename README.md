@@ -72,7 +72,8 @@ $ yarn add nuxt-push-plugins
 Import the function into your Nuxt module and call it by passing `this` and the plugins you want to add. It behaves like [Array.push](https://www.w3schools.com/jsref/jsref_push.asp).
 
 ```js
-// module
+// module.js
+
 import nuxtPushPlugins from 'nuxt-push-plugins'
 
 export default function () {

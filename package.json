@@ -41,11 +41,14 @@
     "@dword-design/functions": "^3.0.0"
   },
   "devDependencies": {
-    "@dword-design/base": "^7.0.0",
+    "@dword-design/base": "^8.0.0",
     "@dword-design/puppeteer": "^4.0.0",
     "nuxt": "~2.15.0",
     "output-files": "^1.1.17",
     "with-local-tmp-dir": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=12"
   },
   "publishConfig": {
     "access": "public"

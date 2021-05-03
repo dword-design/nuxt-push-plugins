@@ -1,3 +1,19 @@
+# [2.0.0](https://github.com/dword-design/nuxt-push-plugins/compare/v1.0.20...v2.0.0) (2021-05-03)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/base to v8 ([#31](https://github.com/dword-design/nuxt-push-plugins/issues/31)) ([c80cbe8](https://github.com/dword-design/nuxt-push-plugins/commit/c80cbe829f8df1a9d08d74b47a7674fbacab115d))
+
+
+### BREAKING CHANGES
+
+* require Node.js >= 12
+
+Co-authored-by: Renovate Bot <bot@renovateapp.com>
+Co-authored-by: Sebastian Landwehr <info@dword-design.de>
+Co-authored-by: GitHub Actions <actions@github.com>
+
 ## [1.0.20](https://github.com/dword-design/nuxt-push-plugins/compare/v1.0.19...v1.0.20) (2021-04-26)
 
 

@@ -44,7 +44,7 @@
     "@dword-design/base": "^8.0.0",
     "@dword-design/puppeteer": "^4.0.0",
     "nuxt": "~2.15.0",
-    "output-files": "^1.1.17",
+    "output-files": "^2.0.0",
     "with-local-tmp-dir": "^3.0.0"
   },
   "engines": {

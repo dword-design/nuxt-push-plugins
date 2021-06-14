@@ -1,3 +1,10 @@
+## [2.0.5](https://github.com/dword-design/nuxt-push-plugins/compare/v2.0.4...v2.0.5) (2021-06-14)
+
+
+### Bug Fixes
+
+* update config files ([34ca26b](https://github.com/dword-design/nuxt-push-plugins/commit/34ca26bbd51ee402816deed24babdc739902fd5d))
+
 ## [2.0.4](https://github.com/dword-design/nuxt-push-plugins/compare/v2.0.3...v2.0.4) (2021-05-28)
 
 

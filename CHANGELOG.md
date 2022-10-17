@@ -1,3 +1,10 @@
+## [2.0.11](https://github.com/dword-design/nuxt-push-plugins/compare/v2.0.10...v2.0.11) (2022-10-17)
+
+
+### Bug Fixes
+
+* undo last changes ([348d751](https://github.com/dword-design/nuxt-push-plugins/commit/348d7516708f5abd6b2a5773f2f0c330454f9e57))
+
 ## [2.0.10](https://github.com/dword-design/nuxt-push-plugins/compare/v2.0.9...v2.0.10) (2022-10-17)
 
 

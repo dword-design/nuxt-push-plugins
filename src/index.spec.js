@@ -87,7 +87,7 @@ export default tester(
               P.resolve('node_modules', '.bin', 'nuxt'),
               ['start']
             )
-            await delay(2000)
+            await delay(3000)
 
             const messages = []
 

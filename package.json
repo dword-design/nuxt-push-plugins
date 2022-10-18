@@ -39,18 +39,19 @@
   },
   "dependencies": {
     "@dword-design/functions": "^4.0.0",
-    "@nuxt/kit": "^3.0.0-rc.11",
-    "esm": "^3.2.25",
-    "jiti": "^1.16.0"
+    "@nuxt/kit": "^3.0.0-rc.11"
   },
   "devDependencies": {
     "@dword-design/base": "^8.0.0",
     "@dword-design/puppeteer": "^5.0.0",
+    "@dword-design/tester": "^2.0.11",
+    "@dword-design/tester-plugin-puppeteer": "^2.1.21",
+    "@dword-design/tester-plugin-tmp-dir": "^2.1.6",
     "execa": "^5",
+    "fs-extra": "^10.1.0",
     "output-files": "^2.0.0",
     "p-wait-for": "^3",
-    "tree-kill-promise": "^2.0.8",
-    "with-local-tmp-dir": "^4.0.0"
+    "tree-kill-promise": "^2.0.8"
   },
   "engines": {
     "node": ">=14"

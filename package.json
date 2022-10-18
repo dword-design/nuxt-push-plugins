@@ -38,13 +38,18 @@
     "test": "base test"
   },
   "dependencies": {
-    "@dword-design/functions": "^4.0.0"
+    "@dword-design/functions": "^4.0.0",
+    "@nuxt/kit": "^3.0.0-rc.11",
+    "esm": "^3.2.25",
+    "jiti": "^1.16.0"
   },
   "devDependencies": {
     "@dword-design/base": "^8.0.0",
     "@dword-design/puppeteer": "^5.0.0",
-    "nuxt": "~2.15.0",
+    "execa": "^5",
     "output-files": "^2.0.0",
+    "p-wait-for": "^3",
+    "tree-kill-promise": "^2.0.8",
     "with-local-tmp-dir": "^4.0.0"
   },
   "engines": {

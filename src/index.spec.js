@@ -68,7 +68,7 @@ export default tester(
           })
 
           const versions = {
-            2: 'nuxt',
+            2: 'nuxt@^2',
             3: 'nuxt@3.0.0-rc.11',
           }
           for (const version of Object.keys(versions)) {
@@ -91,7 +91,10 @@ export default tester(
 
             const messages = []
 
-            const consoleHandler = message => messages.push(message.text())
+            const consoleHandler = message => {
+              messages.push(message.text())
+              console.log(messages)
+            }
             this.page.on('console', consoleHandler)
             await this.page.goto('http://localhost:3000')
             if (config.consoleMessages.length > 0) {

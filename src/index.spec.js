@@ -50,6 +50,7 @@ export default tester(
       },
       async test() {
         await this.page.goto('http://localhost:3000')
+        console.log(await this.page.content())
         await this.page.waitForSelector('.bar')
       },
     },

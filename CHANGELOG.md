@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/dword-design/nuxt-push-plugins/compare/v2.1.0...v2.1.1) (2022-11-03)
+
+
+### Bug Fixes
+
+* simplify tests ([#96](https://github.com/dword-design/nuxt-push-plugins/issues/96)) ([6afe3e2](https://github.com/dword-design/nuxt-push-plugins/commit/6afe3e2bc6e871aadf21f53ccf1c431269c7fadf))
+
 # [2.1.0](https://github.com/dword-design/nuxt-push-plugins/compare/v2.0.11...v2.1.0) (2022-11-03)
 
 

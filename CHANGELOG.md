@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/dword-design/nuxt-push-plugins/compare/v2.0.11...v2.1.0) (2022-11-03)
+
+
+### Features
+
+* nuxt 3 support ([#94](https://github.com/dword-design/nuxt-push-plugins/issues/94)) ([a0ddd98](https://github.com/dword-design/nuxt-push-plugins/commit/a0ddd9858762dcbe50614eec7b6eb4b12db64720))
+
 ## [2.0.11](https://github.com/dword-design/nuxt-push-plugins/compare/v2.0.10...v2.0.11) (2022-10-17)
 
 

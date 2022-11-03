@@ -50,7 +50,6 @@
     "execa": "^5",
     "fs-extra": "^10.1.0",
     "output-files": "^2.0.0",
-    "p-wait-for": "^3",
     "tree-kill-promise": "^2.0.8"
   },
   "engines": {

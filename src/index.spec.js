@@ -1,18 +1,16 @@
-import { delay, endent, isEqual } from '@dword-design/functions'
+import { delay, endent, identity, mapValues } from '@dword-design/functions'
 import tester from '@dword-design/tester'
 import testerPluginPuppeteer from '@dword-design/tester-plugin-puppeteer'
 import testerPluginTmpDir from '@dword-design/tester-plugin-tmp-dir'
 import execa from 'execa'
 import { outputFile } from 'fs-extra'
 import outputFiles from 'output-files'
-import pWaitFor from 'p-wait-for'
 import P from 'path'
 import kill from 'tree-kill-promise'
 
 export default tester(
   {
     works: {
-      consoleMessages: ['foo', 'bar'],
       files: {
         modules: {
           bar: {
@@ -24,7 +22,8 @@ export default tester(
             }
 
           `,
-            'plugin.js': "export default () => console.log('bar')",
+            'plugin.js':
+              "export default (context, inject) => inject('bar', context.$foo)",
           },
           foo: {
             'index.js': endent`
@@ -35,23 +34,23 @@ export default tester(
             }
 
           `,
-            'plugin.js': "export default () => console.log('foo')",
+            'plugin.js':
+              "export default (context, inject) => inject('foo', 'bar')",
           },
         },
         'pages/index.vue': endent`
         <template>
-          <div />
+          <div :class="$bar" />
         </template>
 
       `,
       },
-      nuxtConfigs: {
-        2: {
-          modules: ['~/modules/foo', '~/modules/bar'],
-        },
-        3: {
-          modules: ['./modules/foo', './modules/bar'],
-        },
+      nuxtConfig: {
+        modules: ['~/modules/foo', '~/modules/bar'],
+      },
+      async test() {
+        await this.page.goto('http://localhost:3000')
+        await this.page.waitForSelector('.bar')
       },
     },
   },
@@ -59,28 +58,43 @@ export default tester(
     testerPluginTmpDir(),
     {
       transform: config => {
-        config = { consoleMessages: [], test: () => {}, ...config }
+        config = { test: () => {}, ...config }
 
         return async function () {
           await outputFiles({
             'package.json': JSON.stringify({ type: 'module' }),
             ...config.files,
           })
-
-          const versions = {
-            2: 'nuxt@^2',
-            3: 'nuxt@3.0.0-rc.11',
+          let versions = {
+            'nuxt@3.0.0-rc.11': {
+              transformNuxtConfig: nuxtConfig =>
+                nuxtConfig
+                |> mapValues((value, key) =>
+                  key === 'modules'
+                    ? value.map(mod =>
+                        mod.startsWith('~') ? `.${mod.slice(1)}` : mod
+                      )
+                    : value
+                ),
+            },
+            'nuxt@^2': {},
           }
+          versions =
+            versions
+            |> mapValues(versionConfig => ({
+              transformNuxtConfig: identity,
+              ...versionConfig,
+            }))
           for (const version of Object.keys(versions)) {
-            console.log(versions[version])
+            console.log(version)
             await outputFile(
               'nuxt.config.js',
               `export default ${JSON.stringify({
                 build: { quiet: false },
-                ...config.nuxtConfigs[version],
+                ...versions[version].transformNuxtConfig(config.nuxtConfig),
               })}`
             )
-            await execa.command(`yarn add --dev ${versions[version]}`)
+            await execa.command(`yarn add --dev ${version}`)
             await execa(P.resolve('node_modules', '.bin', 'nuxt'), ['build'])
 
             const childProcess = execa(
@@ -88,21 +102,8 @@ export default tester(
               ['start']
             )
             await delay(3000)
-
-            const messages = []
-
-            const consoleHandler = message => {
-              messages.push(message.text())
-              console.log(messages)
-            }
-            this.page.on('console', consoleHandler)
-            await this.page.goto('http://localhost:3000')
-            if (config.consoleMessages.length > 0) {
-              await pWaitFor(() => messages |> isEqual(config.consoleMessages))
-            }
-            this.page.off('console', consoleHandler)
             try {
-              await config.test()
+              await config.test.call(this)
             } finally {
               await kill(childProcess.pid)
             }

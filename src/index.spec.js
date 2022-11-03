@@ -60,25 +60,14 @@ export default tester(
     testerPluginTmpDir(),
     {
       after: () => Promise.all([remove('nuxt2'), remove('nuxt3')]),
-      before: () =>
-        Promise.all([
-          (async () => {
-            await outputFile(
-              P.join('nuxt2', 'package.json'),
-              JSON.stringify({})
-            )
-            await execa.command('yarn add --dev nuxt', { cwd: 'nuxt2' })
-          })(),
-          (async () => {
-            await outputFile(
-              P.join('nuxt3', 'package.json'),
-              JSON.stringify({})
-            )
-            await execa.command('yarn add --dev nuxt@3.0.0-rc.12', {
-              cwd: 'nuxt3',
-            })
-          })(),
-        ]),
+      before: async () => {
+        await outputFile(P.join('nuxt2', 'package.json'), JSON.stringify({}))
+        await execa.command('yarn add --dev nuxt', { cwd: 'nuxt2' })
+        await outputFile(P.join('nuxt3', 'package.json'), JSON.stringify({}))
+        await execa.command('yarn add --dev nuxt@3.0.0-rc.12', {
+          cwd: 'nuxt3',
+        })
+      },
       transform: config => {
         config = { test: () => {}, ...config }
 

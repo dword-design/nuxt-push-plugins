@@ -96,11 +96,12 @@ export default tester(
               })}`
             )
             await execa.command(`yarn add --dev ${version}`)
-            await execa(P.resolve('node_modules', '.bin', 'nuxt'), ['build'])
+            await execa(P.resolve('node_modules', '.bin', 'nuxt'), ['build'], { stdio: 'inherit' })
 
             const childProcess = execa(
               P.resolve('node_modules', '.bin', 'nuxt'),
-              ['start']
+              ['start'],
+              { stdio: 'inherit' }
             )
             await delay(5000)
             try {

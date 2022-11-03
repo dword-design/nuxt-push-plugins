@@ -74,7 +74,7 @@ export default tester(
               P.join('nuxt3', 'package.json'),
               JSON.stringify({})
             )
-            await execa.command('yarn add --dev nuxt@3.0.0-rc.11', {
+            await execa.command('yarn add --dev nuxt@3.0.0-rc.12', {
               cwd: 'nuxt3',
             })
           })(),

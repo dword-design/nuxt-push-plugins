@@ -101,7 +101,7 @@ export default tester(
               P.resolve('node_modules', '.bin', 'nuxt'),
               ['start']
             )
-            await delay(3000)
+            await delay(5000)
             try {
               await config.test.call(this)
             } finally {

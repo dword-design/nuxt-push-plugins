@@ -48,7 +48,7 @@
     "@dword-design/tester-plugin-puppeteer": "^2.1.21",
     "@dword-design/tester-plugin-tmp-dir": "^2.1.6",
     "depcheck-package-name": "^2.0.6",
-    "execa": "^5",
+    "execa": "^6.0.0",
     "fs-extra": "^10.1.0",
     "nuxt": "^2.15.8",
     "output-files": "^2.0.0",

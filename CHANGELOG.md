@@ -1,3 +1,10 @@
+## [2.1.2](https://github.com/dword-design/nuxt-push-plugins/compare/v2.1.1...v2.1.2) (2022-11-04)
+
+
+### Bug Fixes
+
+* move to esm ([95b901b](https://github.com/dword-design/nuxt-push-plugins/commit/95b901b83b7644e9c4ffd9d7a1d0ea03e651b8b3))
+
 ## [2.1.1](https://github.com/dword-design/nuxt-push-plugins/compare/v2.1.0...v2.1.1) (2022-11-03)
 
 

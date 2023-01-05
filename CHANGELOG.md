@@ -1,3 +1,10 @@
+## [2.1.3](https://github.com/dword-design/nuxt-push-plugins/compare/v2.1.2...v2.1.3) (2023-01-05)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#93](https://github.com/dword-design/nuxt-push-plugins/issues/93)) ([62015c1](https://github.com/dword-design/nuxt-push-plugins/commit/62015c152160ffae85a7c84ed332b938be1fcb92))
+
 ## [2.1.2](https://github.com/dword-design/nuxt-push-plugins/compare/v2.1.1...v2.1.2) (2022-11-04)
 
 

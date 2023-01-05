@@ -129,7 +129,7 @@ export default tester(
             await execa(nuxtPath, ['build'])
 
             const childProcess = execa(nuxtPath, ['start'])
-            await delay(5000)
+            await delay(10000)
             try {
               await config.test.call(this)
             } finally {

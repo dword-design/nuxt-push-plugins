@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "@dword-design/functions": "^4.0.0",
-    "@nuxt/kit": "^3.0.0-rc.11"
+    "@nuxt/kit": "^3.0.0"
   },
   "devDependencies": {
     "@dword-design/base": "^9.1.10",

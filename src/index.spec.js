@@ -112,7 +112,7 @@ export default tester(
             ...config.files,
           })
           if (config.nuxtVersion === 3) {
-            await execaCommand('yarn add --dev nuxt@3.0.0-rc.12')
+            await execaCommand('yarn add --dev nuxt')
             await fs.outputFile(
               'nuxt.config.js',
               `export default ${JSON.stringify({

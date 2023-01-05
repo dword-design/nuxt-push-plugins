@@ -1,4 +1,4 @@
-import { delay, endent } from '@dword-design/functions'
+import { endent } from '@dword-design/functions'
 import tester from '@dword-design/tester'
 import testerPluginPuppeteer from '@dword-design/tester-plugin-puppeteer'
 import testerPluginTmpDir from '@dword-design/tester-plugin-tmp-dir'
@@ -7,6 +7,7 @@ import { execa, execaCommand } from 'execa'
 import fs from 'fs-extra'
 import { Builder, Nuxt } from 'nuxt'
 import outputFiles from 'output-files'
+import { pEvent } from 'p-event'
 import P from 'path'
 import kill from 'tree-kill-promise'
 
@@ -126,10 +127,12 @@ export default tester(
               '.bin',
               packageName`nuxt`
             )
-            await execa(nuxtPath, ['build'])
+            await execa(nuxtPath, ['build'], { stdio: 'inherit' })
 
-            const childProcess = execa(nuxtPath, ['start'])
-            await delay(10000)
+            const childProcess = execaCommand('node .output/server/index.mjs', {
+              all: true,
+            })
+            await pEvent(childProcess.all, 'data')
             try {
               await config.test.call(this)
             } finally {

@@ -54,6 +54,7 @@
     "fs-extra": "^11.1.0",
     "nuxt": "^2.15.8",
     "output-files": "^2.0.0",
+    "p-event": "^5.0.1",
     "tree-kill-promise": "^2.0.8"
   },
   "engines": {

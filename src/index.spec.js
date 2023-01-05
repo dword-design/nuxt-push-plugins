@@ -3,8 +3,8 @@ import tester from '@dword-design/tester'
 import testerPluginPuppeteer from '@dword-design/tester-plugin-puppeteer'
 import testerPluginTmpDir from '@dword-design/tester-plugin-tmp-dir'
 import packageName from 'depcheck-package-name'
-import execa from 'execa'
-import { outputFile } from 'fs-extra'
+import { execa, execaCommand } from 'execa'
+import fs from 'fs-extra'
 import { Builder, Nuxt } from 'nuxt'
 import outputFiles from 'output-files'
 import P from 'path'
@@ -112,8 +112,8 @@ export default tester(
             ...config.files,
           })
           if (config.nuxtVersion === 3) {
-            await execa.command('yarn add --dev nuxt@3.0.0-rc.12')
-            await outputFile(
+            await execaCommand('yarn add --dev nuxt@3.0.0-rc.12')
+            await fs.outputFile(
               'nuxt.config.js',
               `export default ${JSON.stringify({
                 telemetry: false,

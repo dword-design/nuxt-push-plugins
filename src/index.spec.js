@@ -127,7 +127,7 @@ export default tester(
               '.bin',
               packageName`nuxt`
             )
-            await execa(nuxtPath, ['build'], { stdio: 'inherit' })
+            await execa(nuxtPath, ['build'])
 
             const childProcess = execaCommand('node .output/server/index.mjs', {
               all: true,

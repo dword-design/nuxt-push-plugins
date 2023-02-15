@@ -1,4 +1,5 @@
 {
   "name": "@dword-design/node",
-  "supportedNodeVersions": [14, 16]
+  "supportedNodeVersions": [14, 16],
+  "windows": false
 }

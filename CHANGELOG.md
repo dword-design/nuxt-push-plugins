@@ -1,3 +1,11 @@
+## [2.1.4](https://github.com/dword-design/nuxt-push-plugins/compare/v2.1.3...v2.1.4) (2023-02-15)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#102](https://github.com/dword-design/nuxt-push-plugins/issues/102)) ([f48278d](https://github.com/dword-design/nuxt-push-plugins/commit/f48278db68d3b62ce4ffcf0253b6ee94000b65e0))
+* remove windows ([7ffe099](https://github.com/dword-design/nuxt-push-plugins/commit/7ffe0995f0504fdea4f64d523942c1a2f84e5502))
+
 ## [2.1.3](https://github.com/dword-design/nuxt-push-plugins/compare/v2.1.2...v2.1.3) (2023-01-05)
 
 

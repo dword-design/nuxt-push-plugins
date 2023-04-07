@@ -1,3 +1,10 @@
+## [2.1.14](https://github.com/dword-design/nuxt-push-plugins/compare/v2.1.13...v2.1.14) (2023-04-07)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/tester-plugin-puppeteer to v2.1.46 ([1677aea](https://github.com/dword-design/nuxt-push-plugins/commit/1677aeaf5abe7591f200a068b78bd3d2e4deef91))
+
 ## [2.1.13](https://github.com/dword-design/nuxt-push-plugins/compare/v2.1.12...v2.1.13) (2023-04-06)
 
 

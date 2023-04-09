@@ -13,35 +13,35 @@ export default tester(
         modules: {
           bar: {
             'index.js': endent`
-            import self from '../../../src'
+              import self from '../../../src'
 
-            export default function () {
-              self(this, require.resolve('./plugin'))
-            }
+              export default function () {
+                self(this, require.resolve('./plugin'))
+              }
 
-          `,
+            `,
             'plugin.js':
               "export default (context, inject) => inject('bar', context.$foo)",
           },
           foo: {
             'index.js': endent`
-            import self from '../../../src'
+              import self from '../../../src'
 
-            export default function () {
-              self(this, require.resolve('./plugin'))
-            }
+              export default function () {
+                self(this, require.resolve('./plugin'))
+              }
 
-          `,
+            `,
             'plugin.js':
               "export default (context, inject) => inject('foo', 'bar')",
           },
         },
         'pages/index.vue': endent`
-        <template>
-          <div :class="$bar" />
-        </template>
+          <template>
+            <div :class="$bar" />
+          </template>
 
-      `,
+        `,
       },
       nuxtVersion: 3,
       async test() {
@@ -57,35 +57,35 @@ export default tester(
         modules: {
           bar: {
             'index.js': endent`
-            import self from '../../../src'
+              import self from '../../../src'
 
-            export default function () {
-              self(this, require.resolve('./plugin'))
-            }
+              export default function () {
+                self(this, require.resolve('./plugin'))
+              }
 
-          `,
+            `,
             'plugin.js':
               "export default (context, inject) => inject('bar', context.$foo)",
           },
           foo: {
             'index.js': endent`
-            import self from '../../../src'
+              import self from '../../../src'
 
-            export default function () {
-              self(this, require.resolve('./plugin'))
-            }
+              export default function () {
+                self(this, require.resolve('./plugin'))
+              }
 
-          `,
+            `,
             'plugin.js':
               "export default (context, inject) => inject('foo', 'bar')",
           },
         },
         'pages/index.vue': endent`
-        <template>
-          <div :class="$bar" />
-        </template>
+          <template>
+            <div :class="$bar" />
+          </template>
 
-      `,
+        `,
       },
       async test() {
         await this.page.goto('http://localhost:3000')
@@ -93,5 +93,5 @@ export default tester(
       },
     },
   },
-  [testerPluginPuppeteer(), testerPluginNuxtConfig()]
+  [testerPluginPuppeteer(), testerPluginNuxtConfig()],
 )

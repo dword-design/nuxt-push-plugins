@@ -1,3 +1,10 @@
+## [2.1.19](https://github.com/dword-design/nuxt-push-plugins/compare/v2.1.18...v2.1.19) (2023-04-10)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/tester to v2.0.16 ([9330eca](https://github.com/dword-design/nuxt-push-plugins/commit/9330eca0c1d2c6e6e425f64fd4a91b9957cda6fe))
+
 ## [2.1.18](https://github.com/dword-design/nuxt-push-plugins/compare/v2.1.17...v2.1.18) (2023-04-10)
 
 

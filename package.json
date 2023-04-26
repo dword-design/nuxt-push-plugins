@@ -1,6 +1,6 @@
 {
   "name": "nuxt-push-plugins",
-  "version": "2.1.31",
+  "version": "2.1.32",
   "description": "Pushes Nuxt.js plugins to the end of the list instead of the start.",
   "keywords": [
     "addplugin",

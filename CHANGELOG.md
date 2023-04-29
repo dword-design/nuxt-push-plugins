@@ -1,3 +1,10 @@
+## [2.1.34](https://github.com/dword-design/nuxt-push-plugins/compare/v2.1.33...v2.1.34) (2023-04-29)
+
+
+### Bug Fixes
+
+* update dependency @nuxt/kit to v3.4.3 ([287919f](https://github.com/dword-design/nuxt-push-plugins/commit/287919fc1e604b955cf4376481ff9999c11ba5e9))
+
 ## [2.1.33](https://github.com/dword-design/nuxt-push-plugins/compare/v2.1.32...v2.1.33) (2023-04-28)
 
 

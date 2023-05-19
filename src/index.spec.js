@@ -76,10 +76,14 @@ export default tester(
         modules: {
           1: {
             'index.js': endent`
-              import self from '../../../src'
+              import { createResolver } from '@nuxt/kit'
+
+              import self from '../../../src/index.js'
+
+              const resolver = createResolver(import.meta.url)
 
               export default function () {
-                self(this, require.resolve('./plugin'))
+                self(this, resolver.resolve('./plugin.js'))
               }
             `,
             'plugin.js':
@@ -87,10 +91,14 @@ export default tester(
           },
           2: {
             'index.js': endent`
-              import self from '../../../src'
+              import { createResolver } from '@nuxt/kit'
+
+              import self from '../../../src/index.js'
+
+              const resolver = createResolver(import.meta.url)
 
               export default function () {
-                self(this, require.resolve('./plugin'))
+                self(this, resolver.resolve('./plugin'))
               }
             `,
             'plugin.js':
@@ -120,14 +128,13 @@ export default tester(
     testerPluginPuppeteer(),
     {
       before: async () => {
+        const spinner = ora('Installing Nuxt 2').start()
         await fs.outputFile(
-          P.join('node_modules', '.cache', 'tester', 'nuxt2', 'package.json'),
+          P.join('node_modules', '.cache', 'nuxt2', 'package.json'),
           JSON.stringify({}),
         )
-
-        const spinner = ora('Installing Nuxt 2').start()
         await execaCommand('yarn add nuxt@^2', {
-          cwd: P.join('node_modules', '.cache', 'tester', 'nuxt2'),
+          cwd: P.join('node_modules', '.cache', 'nuxt2'),
           stderr: 'inherit',
         })
         spinner.stop()

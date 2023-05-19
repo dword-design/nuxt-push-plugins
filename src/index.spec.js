@@ -18,7 +18,6 @@ export default tester(
               export default function () {
                 self(this, require.resolve('./plugin'))
               }
-
             `,
             'plugin.js':
               "export default (context, inject) => inject('bar', context.$foo)",
@@ -30,7 +29,6 @@ export default tester(
               export default function () {
                 self(this, require.resolve('./plugin'))
               }
-
             `,
             'plugin.js':
               "export default (context, inject) => inject('foo', 'bar')",
@@ -62,7 +60,6 @@ export default tester(
               export default function () {
                 self(this, require.resolve('./plugin'))
               }
-
             `,
             'plugin.js':
               "export default (context, inject) => inject('bar', context.$foo)",
@@ -74,7 +71,6 @@ export default tester(
               export default function () {
                 self(this, require.resolve('./plugin'))
               }
-
             `,
             'plugin.js':
               "export default (context, inject) => inject('foo', 'bar')",
@@ -84,7 +80,6 @@ export default tester(
           <template>
             <div :class="$bar" />
           </template>
-
         `,
       },
       async test() {
